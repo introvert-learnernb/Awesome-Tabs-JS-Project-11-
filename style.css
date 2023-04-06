@@ -1,0 +1,173 @@
+/* Importing google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400&display=swap');
+
+/* ============== BASE ================ */
+
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --our-red:#fc3131;
+    --our-white:#f5f5f5;
+    --our-black:#262626;
+
+    --large-font-size:1.6rem;
+    --normal-font-size:1.2rem;
+    --small-font-size:0.8rem;
+
+    --border-radius: 0.45rem;
+}
+
+::selection{
+    background-color: var(--our-red);
+    color:var(--our-white);
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+}
+
+.container{
+    width:100%;
+    overflow: hidden;
+    /* border:2px solid red; */
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--normal-font-size);
+    text-transform: capitalize;
+}
+
+/* ============== ABOUT HEAD ================ */
+
+.container .about__head{
+    /* border:3px solid green; */
+    text-align: center;
+    padding:2.3rem 0;
+}
+
+.about__head .about__title{
+    font-size: var(--large-font-size);
+    font-weight: 500;
+    color: var(--our-red);
+}
+
+.about__head .about__subtitle{
+    font-size: calc(var(--normal-font-size)*0.7);
+    padding:0 0.875rem;
+}
+
+
+/* ============== ABOUT IMG ================ */
+
+.about__description .about__img__container{
+    width:90%;
+    margin:0 auto;
+    padding:0.25rem 0;
+}
+
+.about__description .about__img__container .about__img{
+    border-radius: var(--border-radius);
+}
+
+/* ============== ABOUT DETAILS ================ */
+
+.about__desc__details{
+    width:90%;
+    height:220px;
+    margin:0 auto;
+    background-color: var(--our-black);
+    color:var(--our-white);
+    border-radius:var(--border-radius);
+}
+.about__desc__details .btn__container{
+    
+    /* border:2px solid black; */
+   
+    
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about__desc__details .btn__container .tab__btn{
+    padding:0.35rem 0.3rem;
+    font-size: calc(var(--normal-font-size)*0.8);
+    border:none;
+    outline:none;
+    background-color: transparent;
+    color:var(--our-white);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.about__desc__details .btn__container .tab__btn:first-child{
+    border-top-left-radius:var(--border-radius);
+}
+
+.about__desc__details .btn__container .tab__btn:last-child{
+    border-top-right-radius:var(--border-radius);
+}
+
+.about__desc__details .btn__container .tab__btn:hover{
+    color:var(--our-red);
+    background-color: var(--our-white);
+}
+
+.btn__container .tab__btn.active{
+    background-color: var(--our-red);
+    color:var(--our-white);
+}
+
+.btn__container .tab__btn.active:hover{
+    background-color: var(--our-red);
+    color:var(--our-white);
+}
+
+.content__container .content{
+    padding:1rem;
+    font-size: var(--small-font-size);
+    display: none;
+}
+
+.about__desc__details .content__container .content.active{
+    display:block;
+}
+
+/* ============= Adding Break Points ================= */
+
+@media screen and (max-width:300px){
+    .about__desc__details{
+        height:300px;
+        
+    }
+}
+
+@media screen and (min-width:600px){
+    .about__description{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .about__desc__details{
+       height: 270px;
+    }
+}
+
+@media screen and (min-width:800px){
+    :root{
+        
+        --large-font-size:2.8rem;
+        --normal-font-size:1.6rem;
+        --small-font-size:1rem;
+    
+    }
+}
